@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Integração via checkout e obtendo os dados do comprador
+          Integração via checkout - obtendo os dados do comprador
         </p>
         <Checkout1 />
         <p>
