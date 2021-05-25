@@ -1,22 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import {CheckoutWhitoutCustomerData as Checkout1} from './checkout/CheckoutWhitoutCustomerData'
+import {CheckoutWhitCustomerData as Checkout2} from './checkout/CheckoutWhitCustomerData'
+
 
 function App() {
+  const customer = {
+    external_id: '#123456789',
+    name: 'Fulano',
+    type: 'individual',
+    country: 'br',
+    email: 'fulano@email.com',
+    documents: [
+      {
+        type: 'cpf',
+        number: '71404665560',
+      },
+    ],
+    phone_numbers: ['+5511999998888', '+5511888889999'],
+    birthday: '1985-01-01',
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Integração via checkout e obtendo os dados do comprador
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Checkout1 />
+        <p>
+          Integração via checkout sem a obtenção dos dados comprador
+        </p>
+        <Checkout2 customerData={customer} />
       </header>
     </div>
   );
