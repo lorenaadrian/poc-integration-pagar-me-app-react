@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CheckoutWhitCustomerData = (props) =>{    
+export const CheckoutComObtencaoDadosComprador = (props) =>{    
   const {customerData} = props;
   const handleOnClickNew = () => {
     function handleSuccess (data) {
@@ -12,7 +12,7 @@ export const CheckoutWhitCustomerData = (props) =>{
     }
   
     var checkout = new window.PagarMeCheckout.Checkout({
-      encryption_key: 'ek_test_f9cws0bU9700VqWE4UDuBlKLbvX4IO',
+      encryption_key: 'ENC_KEY',
       success: handleSuccess,
       error: handleError
     });

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export const CheckoutWhitoutCustomerData = () =>{
+export const CheckoutSemObtencaoDadosComprador = () =>{
   const [colorUi, setColorUi] = useState('#fff');
   
   const handleColor = (e) => {
@@ -33,7 +33,7 @@ export const CheckoutWhitoutCustomerData = () =>{
     }
   
     var checkout = new window.PagarMeCheckout.Checkout({
-      encryption_key: 'ek_test_f9cws0bU9700VqWE4UDuBlKLbvX4IO',
+      encryption_key: 'ENC_KEY',
       success: handleSuccess,
       error: handleError
     });
